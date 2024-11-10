@@ -1,0 +1,1 @@
+export { default as HeroSection } from '@/components/UI/Home/HeroSection';
