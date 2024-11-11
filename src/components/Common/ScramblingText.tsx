@@ -11,9 +11,9 @@ interface ScrambleTextProps {
 }
 
 const ScrambleText: React.FC<ScrambleTextProps> = ({
-  targetText = '', // Provide default empty string
+  targetText = '',
   className = '',
-  duration = 1000, // Default duration of 1 second
+  duration = 1000,
 }) => {
   // Initialize displayText with spaces matching targetText length
   const [displayText, setDisplayText] = useState(() =>
