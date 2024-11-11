@@ -47,9 +47,10 @@ const MainContent = () => {
               quality={100}
             />
             <div className="p-8 bg-foreground rounded-br-2xl rounded-bl-2xl">
-              <h2 className="text-[3rem] font-medium font-orbitron">
-                Marketplace
-              </h2>
+              <ScrambleText
+                targetText="Marketplace"
+                className="text-[3rem] font-medium font-orbitron"
+              />
 
               <p className="text-xl leading-[150%] mt-3">
                 0N1 FORCE and Origin Protocol are rewarding active community
@@ -71,7 +72,10 @@ const MainContent = () => {
               quality={100}
             />
             <div className="p-8 bg-foreground rounded-br-2xl rounded-bl-2xl">
-              <h2 className="text-[3rem] font-medium font-orbitron">Comic</h2>
+              <ScrambleText
+                className="text-[3rem] font-medium font-orbitron"
+                targetText="Comic"
+              />
 
               <p className="text-xl leading-[150%] mt-3">
                 <span>
@@ -102,7 +106,7 @@ const MainContent = () => {
           </article>
         </div>
 
-        <div className="flex flex-col gap-4 max-w-[41.75rem]">
+        <div className="flex flex-col gap-4 max-w-[44.75rem]">
           <article className="rounded-2xl">
             <Image
               src={on1verse}
@@ -111,9 +115,10 @@ const MainContent = () => {
               quality={100}
             />
             <div className="p-8 bg-foreground rounded-br-2xl rounded-bl-2xl">
-              <h2 className="text-[3rem] font-medium font-orbitron">
-                THE 0N1VERSE
-              </h2>
+              <ScrambleText
+                className="text-[3rem] font-medium font-orbitron"
+                targetText="THE 0N1VERSE"
+              />
 
               <p className="text-xl leading-[150%] mt-3">
                 0N1 Force sees the future of NFT ownership as cross-platform. We
@@ -137,9 +142,10 @@ const MainContent = () => {
               quality={100}
             />
             <div className="p-8 bg-foreground rounded-br-2xl rounded-bl-2xl">
-              <h2 className="text-[3rem] font-medium font-orbitron">
-                0N1 FRAMES
-              </h2>
+              <ScrambleText
+                targetText="0N1 FRAMES"
+                className="text-[3rem] font-medium font-orbitron"
+              />
 
               <p className="text-xl leading-[150%] mt-3">
                 THE ORIGINAL 0N1 FORCE NFTS ARE THE KEY:As long as you own an

@@ -1,4 +1,5 @@
 import Button from '@/components/Common/Button';
+import ScrambleText from '@/components/Common/ScramblingText';
 import art_1 from '@/images/art_1.png';
 import art_2 from '@/images/art_2.png';
 import art_3 from '@/images/art_3.png';
@@ -39,9 +40,10 @@ const ArtShowcaseSection = () => {
       </div>
 
       <div className="w-[24.6875rem] bg-foreground p-8 flex-shrink-0 rounded-2xl">
-        <h2 className="text-4xl font-bold font-orbitron mb-3">
-          JOIN THE 0N1 FORCE
-        </h2>
+        <ScrambleText
+          targetText="JOIN THE 0N1 FORCE"
+          className="text-4xl font-bold font-orbitron mb-3"
+        />
         <p className="text-xl leading-[150%]">
           The 0N1 Force are 7,777 generative side-profile characters with over
           100 hand-drawn features fighting for their existence. Strength,
