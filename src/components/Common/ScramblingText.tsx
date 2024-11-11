@@ -1,6 +1,6 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const scramble = (text: string) => {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -20,9 +20,11 @@ const ScrambleText: React.FC<{ targetText: string; className: string }> = ({
 }) => {
   const [displayText, setDisplayText] = useState(scramble(targetText));
   const [completed, setCompleted] = useState(false);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, amount: 0.3 });
 
   useEffect(() => {
-    if (!completed) {
+    if (inView && !completed) {
       const interval = setInterval(() => {
         setDisplayText((prevText) =>
           prevText
@@ -32,11 +34,11 @@ const ScrambleText: React.FC<{ targetText: string; className: string }> = ({
             )
             .join('')
         );
-      }, 25); // Changed from 100ms to 25ms for much faster scrambling
+      }, 25);
 
       return () => clearInterval(interval);
     }
-  }, [displayText, completed]);
+  }, [displayText, completed, inView]);
 
   useEffect(() => {
     if (displayText === targetText) {
@@ -46,10 +48,11 @@ const ScrambleText: React.FC<{ targetText: string; className: string }> = ({
 
   return (
     <motion.div
+      ref={ref}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 1 }}
-      className={className}
+      className={`font-orbitron ${className}`}
     >
       {displayText}
     </motion.div>

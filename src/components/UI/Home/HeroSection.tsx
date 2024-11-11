@@ -25,7 +25,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative w-[90%] max-w-screen-xl mx-auto bg-[#171717] overflow-hidden">
+    <section className="relative w-[90%] max-w-screen-xl mx-auto overflow-hidden">
       <div className="relative h-[700px]">
         <div className="absolute inset-0">
           <Image
