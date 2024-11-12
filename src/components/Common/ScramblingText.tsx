@@ -4,18 +4,11 @@ import { motion, useInView } from 'framer-motion';
 
 const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
-interface ScrambleTextProps {
-  targetText: string;
-  className?: string;
-  duration?: number;
-}
-
 const ScrambleText: React.FC<ScrambleTextProps> = ({
   targetText = '',
   className = '',
   duration = 1000,
 }) => {
-  // Initialize displayText with spaces matching targetText length
   const [displayText, setDisplayText] = useState(() =>
     ' '.repeat(targetText.length)
   );

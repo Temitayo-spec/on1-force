@@ -1,9 +1,4 @@
-import {
-  ArtShowcaseSection,
-  Footer,
-  HeroSection,
-  MainContent,
-} from '@/components';
+import { ArtShowcaseSection, HeroSection, MainContent } from '@/components';
 
 export default function Home() {
   return (
@@ -11,7 +6,6 @@ export default function Home() {
       <HeroSection />
       <MainContent />
       <ArtShowcaseSection />
-      <Footer />
     </div>
   );
 }
